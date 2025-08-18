@@ -10,44 +10,50 @@ function computerChoice (){
     }
 }
 
+
+
+let computerScore = 0;
+let userScore = 0;
+
 function playRound ( user,computer ){
+    const score = document.querySelector(`#currentScore`);
     if ( user == "rock" ){
         if ( computer  == "rock" ){
-            console.log("Tie!");
+            score.textContent = "You " + userScore + ":" + computerScore + " Computer";
         }
         if ( computer  == "paper" ){
             computerScore ++;
-            console.log("Computer Wins This Round!");
+            score.textContent = "You " + userScore + ":" + computerScore + " Computer";
         }
         if ( computer  == "scissors" ){
             userScore ++;
-            console.log("You Win This Round!");
+            score.textContent = "You " + userScore + ":" + computerScore + " Computer";
         }
     }
     if ( user == "paper" ){
         if ( computer  == "paper" ){
-            console.log("Tie!");
+            score.textContent = "You " + userScore + ":" + computerScore + " Computer";
         }
         if ( computer  == "scissors" ){
             computerScore ++;
-            console.log("Computer Wins This Round!");
+            score.textContent = "You " + userScore + ":" + computerScore + " Computer";
         }
         if ( computer  == "rock" ){
             userScore ++;
-            console.log("You Win This Round!");
+            score.textContent = "You " + userScore + ":" + computerScore + " Computer";
         }
     }
     if ( user == "scissors" ){
         if ( computer  == "scissors" ){
-            console.log("Tie!");
+            score.textContent = "You " + userScore + ":" + computerScore + " Computer";
         }
         if ( computer  == "rock" ){
             computerScore ++;
-            console.log("Computer Wins This Round!");
+            score.textContent = "You " + userScore + ":" + computerScore + " Computer";
         }
         if ( computer  == "paper" ){
             userScore ++;
-            console.log("You Win This Round!");
+            score.textContent = "You " + userScore + ":" + computerScore + " Computer";
         }
     }
 }
