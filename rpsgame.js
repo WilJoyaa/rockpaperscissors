@@ -18,6 +18,9 @@ let userScore = 0;
 function playRound ( user,computer ){
     const score = document.querySelector(`#currentScore`);
     const winner = document.querySelector(`#roundWinner`);
+    if ( userScore == 5 || computerScore == 5 ){
+        winner.textContent
+    }
     if ( user == "rock" ){
         if ( computer  == "rock" ){
             winner.textContent = "Tie!";
